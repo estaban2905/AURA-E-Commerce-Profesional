@@ -33,8 +33,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, className = '
   const hasDiscount = !!compareAtPrice && compareAtPrice > price;
   const discountPercent = hasDiscount ? Math.round(((compareAtPrice - price) / compareAtPrice) * 100) : 0;
 
-  // Use primary image or secondary on hover if available
-  const primaryImage = product.images[0] || 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800';
+  // Use selected variant image or primary image, and secondary on hover if available
+  const primaryImage = activeVariant?.image || product.images[0] || 'https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800';
   const hoverImage = product.images[1] || primaryImage;
 
   const handleAddToCart = (e: React.MouseEvent) => {

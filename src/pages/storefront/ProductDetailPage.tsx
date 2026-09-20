@@ -37,12 +37,18 @@ export const ProductDetailPage: React.FC = () => {
   const { isInWishlist, toggleItem } = useWishlistStore();
   const toast = useToast();
 
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [selectedVariantIndex, setSelectedVariantIndex] = useState(0);
+  const [activeImageOverride, setActiveImageOverride] = useState<string | null>(null);
   const [quantity, setQuantity] = useState(1);
   const [activeTab, setActiveTab] = useState<'desc' | 'specs' | 'box' | 'reviews'>('desc');
   const [communeZip, setCommuneZip] = useState('Santiago Centro');
   const [shippingCalculated, setShippingCalculated] = useState(false);
+
+  // Reset variant and active image when navigating products
+  React.useEffect(() => {
+    setSelectedVariantIndex(0);
+    setActiveImageOverride(null);
+  }, [product?.id]);
 
   // Review Form state
   const [reviewRating, setReviewRating] = useState(5);
@@ -96,7 +102,20 @@ export const ProductDetailPage: React.FC = () => {
     ? Math.round(((compareAtPrice - price) / compareAtPrice) * 100)
     : 0;
 
-  const currentImage = product.images[selectedImageIndex] || product.images[0];
+  // Aggregate all unique images: standard product images + variant-specific images
+  const allImages = React.useMemo(() => {
+    const list: string[] = [...(product.images || [])];
+    if (product.variants) {
+      product.variants.forEach((v) => {
+        if (v.image && !list.includes(v.image)) {
+          list.push(v.image);
+        }
+      });
+    }
+    return list.length > 0 ? list : ['https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800'];
+  }, [product]);
+
+  const currentImage = activeImageOverride || activeVariant?.image || allImages[0];
   const quotaAmount = Math.round(price / 12);
 
   const handleAddToCart = () => {
@@ -175,22 +194,31 @@ export const ProductDetailPage: React.FC = () => {
           </div>
 
           {/* Thumbnails */}
-          {product.images.length > 1 && (
-            <div className="grid grid-cols-5 gap-3">
-              {product.images.map((img, idx) => (
-                <button
-                  key={idx}
-                  type="button"
-                  onClick={() => setSelectedImageIndex(idx)}
-                  className={`relative aspect-square rounded-xl overflow-hidden border-2 transition-all ${
-                    selectedImageIndex === idx
-                      ? 'border-primary ring-2 ring-primary/20 scale-95'
-                      : 'border-border/80 opacity-70 hover:opacity-100'
-                  }`}
-                >
-                  <img src={img} alt="thumbnail" className="h-full w-full object-cover" />
-                </button>
-              ))}
+          {allImages.length > 1 && (
+            <div className="grid grid-cols-5 sm:grid-cols-6 gap-2.5">
+              {allImages.map((img, idx) => {
+                const isActive = currentImage === img;
+                return (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => {
+                      setActiveImageOverride(img);
+                      const matchIdx = product.variants?.findIndex((v) => v.image === img);
+                      if (matchIdx !== undefined && matchIdx >= 0) {
+                        setSelectedVariantIndex(matchIdx);
+                      }
+                    }}
+                    className={`relative aspect-square rounded-xl overflow-hidden border-2 transition-all ${
+                      isActive
+                        ? 'border-primary ring-2 ring-primary/20 scale-95 shadow-sm'
+                        : 'border-border/80 opacity-70 hover:opacity-100 hover:border-foreground/30'
+                    }`}
+                  >
+                    <img src={img} alt={`${product.name} ángulo ${idx + 1}`} className="h-full w-full object-cover" />
+                  </button>
+                );
+              })}
             </div>
           )}
         </div>
@@ -255,7 +283,12 @@ export const ProductDetailPage: React.FC = () => {
                   <button
                     key={variant.id}
                     type="button"
-                    onClick={() => setSelectedVariantIndex(idx)}
+                    onClick={() => {
+                      setSelectedVariantIndex(idx);
+                      if (variant.image) {
+                        setActiveImageOverride(variant.image);
+                      }
+                    }}
                     className={`flex items-center gap-2 px-3 py-2 rounded-xl border text-xs font-semibold transition-all ${
                       selectedVariantIndex === idx
                         ? 'border-primary bg-primary/10 text-primary shadow-xs'

@@ -19,7 +19,7 @@ export const QuickViewModal: React.FC = () => {
   const navigate = useNavigate();
 
   const [selectedVariantIndex, setSelectedVariantIndex] = useState(0);
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [activeImageOverride, setActiveImageOverride] = useState<string | null>(null);
   const [quantity, setQuantity] = useState(1);
   const [isAdded, setIsAdded] = useState(false);
 
@@ -34,7 +34,12 @@ export const QuickViewModal: React.FC = () => {
     ? Math.round(((product.compareAtPrice! - price) / product.compareAtPrice!) * 100)
     : 0;
 
-  const currentImage = product.images[selectedImageIndex] || product.images[0];
+  const allImages = [
+    ...(product.images || []),
+    ...(product.variants?.map((v) => v.image).filter(Boolean) as string[] || []),
+  ].filter((v, i, a) => a.indexOf(v) === i);
+
+  const currentImage = activeImageOverride || activeVariant?.image || allImages[0] || product.images[0];
 
   const handleAddToCart = () => {
     addItem(product, activeVariant, quantity);
@@ -95,20 +100,29 @@ export const QuickViewModal: React.FC = () => {
           </div>
 
           {/* Gallery Thumbnails */}
-          {product.images.length > 1 && (
+          {allImages.length > 1 && (
             <div className="mt-4 flex gap-2 overflow-x-auto max-w-full pb-1">
-              {product.images.map((img, idx) => (
-                <button
-                  key={idx}
-                  type="button"
-                  onClick={() => setSelectedImageIndex(idx)}
-                  className={`h-14 w-14 shrink-0 rounded-lg overflow-hidden border-2 transition-all ${
-                    selectedImageIndex === idx ? 'border-primary' : 'border-transparent opacity-70 hover:opacity-100'
-                  }`}
-                >
-                  <img src={img} alt="thumbnail" className="h-full w-full object-cover" />
-                </button>
-              ))}
+              {allImages.map((img, idx) => {
+                const isActive = currentImage === img;
+                return (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => {
+                      setActiveImageOverride(img);
+                      const matchIdx = product.variants?.findIndex((v) => v.image === img);
+                      if (matchIdx !== undefined && matchIdx >= 0) {
+                        setSelectedVariantIndex(matchIdx);
+                      }
+                    }}
+                    className={`h-14 w-14 shrink-0 rounded-lg overflow-hidden border-2 transition-all ${
+                      isActive ? 'border-primary ring-1 ring-primary/30' : 'border-transparent opacity-70 hover:opacity-100'
+                    }`}
+                  >
+                    <img src={img} alt="thumbnail" className="h-full w-full object-cover" />
+                  </button>
+                );
+              })}
             </div>
           )}
         </div>
@@ -155,7 +169,12 @@ export const QuickViewModal: React.FC = () => {
                   <button
                     key={v.id}
                     type="button"
-                    onClick={() => setSelectedVariantIndex(i)}
+                    onClick={() => {
+                      setSelectedVariantIndex(i);
+                      if (v.image) {
+                        setActiveImageOverride(v.image);
+                      }
+                    }}
                     className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border text-xs font-medium transition-all ${
                       selectedVariantIndex === i
                         ? 'border-primary bg-primary/5 text-primary'

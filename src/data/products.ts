@@ -20,11 +20,12 @@ export const mockProducts: Product[] = [
     stock: 24,
     images: [
       'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800&auto=format&fit=crop&q=80',
       'https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-1', name: 'Negro Mate', sku: 'AUR-NOV-001-BLK', color: 'Negro Mate', colorHex: '#18181b', price: 189990, stock: 15 },
-      { id: 'v-2', name: 'Plata Lunar', sku: 'AUR-NOV-001-SLV', color: 'Plata Lunar', colorHex: '#d4d4d8', price: 189990, stock: 9 },
+      { id: 'v-1', name: 'Negro Mate', sku: 'AUR-NOV-001-BLK', color: 'Negro Mate', colorHex: '#18181b', price: 189990, stock: 15, image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=80' },
+      { id: 'v-2', name: 'Plata Lunar', sku: 'AUR-NOV-001-SLV', color: 'Plata Lunar', colorHex: '#d4d4d8', price: 189990, stock: 9, image: 'https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Transductor', value: '40mm Berilio Custom' },
@@ -60,8 +61,8 @@ export const mockProducts: Product[] = [
       'https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-3', name: 'Grafito', sku: 'AUR-NOV-002-GRF', color: 'Grafito', colorHex: '#27272a', price: 89990, stock: 25 },
-      { id: 'v-4', name: 'Blanco Nieve', sku: 'AUR-NOV-002-WHT', color: 'Blanco', colorHex: '#fafafa', price: 89990, stock: 20 },
+      { id: 'v-3', name: 'Grafito', sku: 'AUR-NOV-002-GRF', color: 'Grafito', colorHex: '#27272a', price: 89990, stock: 25, image: 'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=800&auto=format&fit=crop&q=80' },
+      { id: 'v-4', name: 'Blanco Nieve', sku: 'AUR-NOV-002-WHT', color: 'Blanco', colorHex: '#fafafa', price: 89990, stock: 20, image: 'https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Cancelación de Ruido', value: 'ANC Dinámico hasta -42dB' },
@@ -94,8 +95,8 @@ export const mockProducts: Product[] = [
       'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-5', name: 'Verde Militar', sku: 'AUR-SND-003-GRN', color: 'Verde Militar', colorHex: '#3f4f3e', price: 69990, stock: 10 },
-      { id: 'v-6', name: 'Negro Onix', sku: 'AUR-SND-003-BLK', color: 'Negro', colorHex: '#18181b', price: 69990, stock: 8 },
+      { id: 'v-5', name: 'Verde Militar', sku: 'AUR-SND-003-GRN', color: 'Verde Militar', colorHex: '#3f4f3e', price: 69990, stock: 10, image: 'https://images.unsplash.com/photo-1545454675-3531b543be5d?w=800&auto=format&fit=crop&q=80' },
+      { id: 'v-6', name: 'Negro Onix', sku: 'AUR-SND-003-BLK', color: 'Negro', colorHex: '#18181b', price: 69990, stock: 8, image: 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Potencia RMS', value: '60W RMS Dual Sub' },
@@ -124,11 +125,11 @@ export const mockProducts: Product[] = [
     reviewsCount: 42,
     stock: 12,
     images: [
-      'https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-7', name: 'Aluminio Anodizado', sku: 'AUR-NOV-004-ALM', price: 119990, stock: 12 },
+      { id: 'v-7', name: 'Aluminio Anodizado', sku: 'AUR-NOV-004-ALM', price: 119990, stock: 12, image: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Decodificación', value: 'PCM 32bit/384kHz, DSD256' },
@@ -157,11 +158,11 @@ export const mockProducts: Product[] = [
     reviewsCount: 38,
     stock: 9,
     images: [
-      'https://images.unsplash.com/photo-1545454675-3531b543be5d?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1543512214-318c7553f230?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-8', name: 'Negro Carbón', sku: 'AUR-SND-005-BLK', price: 299990, stock: 9 },
+      { id: 'v-8', name: 'Negro Carbón', sku: 'AUR-SND-005-BLK', price: 299990, stock: 9, image: 'https://images.unsplash.com/photo-1543512214-318c7553f230?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Canales', value: '5.1.2 Surround Atmos' },
@@ -190,12 +191,12 @@ export const mockProducts: Product[] = [
     reviewsCount: 51,
     stock: 30,
     images: [
+      'https://images.unsplash.com/photo-1572536147248-ac59a8abfa4b?w=800&auto=format&fit=crop&q=80',
       'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-9', name: 'Naranja Volt', sku: 'AUR-NOV-006-ORG', color: 'Naranja', colorHex: '#f97316', price: 74990, stock: 15 },
-      { id: 'v-10', name: 'Negro Mate', sku: 'AUR-NOV-006-BLK', color: 'Negro', colorHex: '#18181b', price: 74990, stock: 15 },
+      { id: 'v-9', name: 'Naranja Volt', sku: 'AUR-NOV-006-ORG', color: 'Naranja', colorHex: '#f97316', price: 74990, stock: 15, image: 'https://images.unsplash.com/photo-1572536147248-ac59a8abfa4b?w=800&auto=format&fit=crop&q=80' },
+      { id: 'v-10', name: 'Negro Mate', sku: 'AUR-NOV-006-BLK', color: 'Negro', colorHex: '#18181b', price: 74990, stock: 15, image: 'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Autonomía', value: '10h por carga (35h con estuche)' },
@@ -224,12 +225,12 @@ export const mockProducts: Product[] = [
     reviewsCount: 88,
     stock: 50,
     images: [
-      'https://images.unsplash.com/photo-1545454675-3531b543be5d?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1589003077984-894e133dabab?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-11', name: 'Azul Marino', sku: 'AUR-SND-007-BLU', color: 'Azul', colorHex: '#1e3a8a', price: 34990, stock: 25 },
-      { id: 'v-12', name: 'Gris Espacial', sku: 'AUR-SND-007-GRY', color: 'Gris', colorHex: '#4b5563', price: 34990, stock: 25 },
+      { id: 'v-11', name: 'Azul Marino', sku: 'AUR-SND-007-BLU', color: 'Azul', colorHex: '#1e3a8a', price: 34990, stock: 25, image: 'https://images.unsplash.com/photo-1589003077984-894e133dabab?w=800&auto=format&fit=crop&q=80' },
+      { id: 'v-12', name: 'Gris Espacial', sku: 'AUR-SND-007-GRY', color: 'Gris', colorHex: '#4b5563', price: 34990, stock: 25, image: 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Potencia', value: '15W Peak' },
@@ -258,11 +259,11 @@ export const mockProducts: Product[] = [
     reviewsCount: 31,
     stock: 8,
     images: [
-      'https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1520170350707-b2da59970118?w=800&auto=format&fit=crop&q=80',
       'https://images.unsplash.com/photo-1545454675-3531b543be5d?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-13', name: 'Par Monitores Nogal', sku: 'AUR-NOV-008-WNT', price: 249990, stock: 8 },
+      { id: 'v-13', name: 'Par Monitores Nogal', sku: 'AUR-NOV-008-WNT', price: 249990, stock: 8, image: 'https://images.unsplash.com/photo-1520170350707-b2da59970118?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Woofer', value: '5.25" Kevlar tejido' },
@@ -293,11 +294,11 @@ export const mockProducts: Product[] = [
     reviewsCount: 147,
     stock: 35,
     images: [
-      'https://images.unsplash.com/photo-1558002038-1055907df827?w=800&auto=format&fit=crop&q=80',
       'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-14', name: 'Negro Mate', sku: 'AURA-LUM-009-BLK', color: 'Negro', colorHex: '#18181b', price: 64990, stock: 35 },
+      { id: 'v-14', name: 'Negro Mate', sku: 'AURA-LUM-009-BLK', color: 'Negro', colorHex: '#18181b', price: 64990, stock: 35, image: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Índice CRI', value: 'Ra > 95 (Colores reales)' },
@@ -327,10 +328,10 @@ export const mockProducts: Product[] = [
     stock: 16,
     images: [
       'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1558002038-1055907df827?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-15', name: 'Blanco Mate', sku: 'AURA-ZEN-010-WHT', color: 'Blanco', colorHex: '#ffffff', price: 139990, stock: 16 },
+      { id: 'v-15', name: 'Blanco Mate', sku: 'AURA-ZEN-010-WHT', color: 'Blanco', colorHex: '#ffffff', price: 139990, stock: 16, image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Cobertura', value: 'Hasta 45 m²' },
@@ -359,11 +360,11 @@ export const mockProducts: Product[] = [
     reviewsCount: 62,
     stock: 28,
     images: [
+      'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&auto=format&fit=crop&q=80',
       'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1558002038-1055907df827?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-16', name: 'Duo Pack Negro', sku: 'AURA-ZEN-011-DUO', price: 54990, stock: 28 },
+      { id: 'v-16', name: 'Duo Pack Negro', sku: 'AURA-ZEN-011-DUO', price: 54990, stock: 28, image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Tecnología', value: 'RGBIC Multi-color simultáneo' },
@@ -392,11 +393,11 @@ export const mockProducts: Product[] = [
     reviewsCount: 89,
     stock: 40,
     images: [
-      'https://images.unsplash.com/photo-1558002038-1055907df827?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&auto=format&fit=crop&q=80',
       'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-17', name: 'Blanco', sku: 'AURA-ZEN-012-WHT', price: 27990, stock: 40 },
+      { id: 'v-17', name: 'Blanco', sku: 'AURA-ZEN-012-WHT', price: 27990, stock: 40, image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Pantalla', value: 'Tinta Electrónica de Alto Contraste' },
@@ -425,11 +426,11 @@ export const mockProducts: Product[] = [
     reviewsCount: 39,
     stock: 14,
     images: [
+      'https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?w=800&auto=format&fit=crop&q=80',
       'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1558002038-1055907df827?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-18', name: 'Gris Espacial', sku: 'AURA-LUM-013-GRY', color: 'Gris', colorHex: '#374151', price: 89990, stock: 14 },
+      { id: 'v-18', name: 'Gris Espacial', sku: 'AURA-LUM-013-GRY', color: 'Gris', colorHex: '#374151', price: 89990, stock: 14, image: 'https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Carga inalámbrica', value: 'MagSafe Qi2 15W' },
@@ -458,12 +459,12 @@ export const mockProducts: Product[] = [
     reviewsCount: 57,
     stock: 22,
     images: [
-      'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1602928321679-560bb453f190?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-19', name: 'Cerámica Terracota', sku: 'AURA-ZEN-014-TER', color: 'Terracota', colorHex: '#b45309', price: 39990, stock: 10 },
-      { id: 'v-20', name: 'Cerámica Carbón', sku: 'AURA-ZEN-014-CHR', color: 'Carbón', colorHex: '#262626', price: 39990, stock: 12 },
+      { id: 'v-19', name: 'Cerámica Terracota', sku: 'AURA-ZEN-014-TER', color: 'Terracota', colorHex: '#b45309', price: 39990, stock: 10, image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=800&auto=format&fit=crop&q=80' },
+      { id: 'v-20', name: 'Cerámica Carbón', sku: 'AURA-ZEN-014-CHR', color: 'Carbón', colorHex: '#262626', price: 39990, stock: 12, image: 'https://images.unsplash.com/photo-1602928321679-560bb453f190?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Capacidad', value: '180 ml (hasta 8h continuas)' },
@@ -494,12 +495,12 @@ export const mockProducts: Product[] = [
     reviewsCount: 34,
     stock: 7,
     images: [
-      'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&auto=format&fit=crop&q=80',
       'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-21', name: '32GB RAM / 1TB SSD', sku: 'AURA-HYP-015-32', price: 2199990, stock: 4 },
-      { id: 'v-22', name: '64GB RAM / 2TB SSD', sku: 'AURA-HYP-015-64', price: 2699990, stock: 3 },
+      { id: 'v-21', name: '32GB RAM / 1TB SSD', sku: 'AURA-HYP-015-32', price: 2199990, stock: 4, image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&auto=format&fit=crop&q=80' },
+      { id: 'v-22', name: '64GB RAM / 2TB SSD', sku: 'AURA-HYP-015-64', price: 2699990, stock: 3, image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Pantalla', value: '16.2" Liquid XDR Mini-LED 3456x2234 a 165Hz' },
@@ -531,12 +532,12 @@ export const mockProducts: Product[] = [
     reviewsCount: 52,
     stock: 15,
     images: [
-      'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-23', name: 'Gris Grafito 16GB/512GB', sku: 'AURA-HYP-016-16', color: 'Gris Grafito', colorHex: '#334155', price: 1249990, stock: 10 },
-      { id: 'v-24', name: 'Plata Estelar 32GB/1TB', sku: 'AURA-HYP-016-32', color: 'Plata', colorHex: '#e2e8f0', price: 1499990, stock: 5 },
+      { id: 'v-23', name: 'Gris Grafito 16GB/512GB', sku: 'AURA-HYP-016-16', color: 'Gris Grafito', colorHex: '#334155', price: 1249990, stock: 10, image: 'https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=800&auto=format&fit=crop&q=80' },
+      { id: 'v-24', name: 'Plata Estelar 32GB/1TB', sku: 'AURA-HYP-016-32', color: 'Plata', colorHex: '#e2e8f0', price: 1499990, stock: 5, image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Peso', value: '0.98 kg' },
@@ -565,11 +566,11 @@ export const mockProducts: Product[] = [
     reviewsCount: 68,
     stock: 20,
     images: [
-      'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1625842268584-8f3296236761?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-25', name: 'Aluminio Macizo', sku: 'AURA-VTX-017-ALU', price: 179990, stock: 20 },
+      { id: 'v-25', name: 'Aluminio Macizo', sku: 'AURA-VTX-017-ALU', price: 179990, stock: 20, image: 'https://images.unsplash.com/photo-1625842268584-8f3296236761?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Potencia Host', value: '100W Power Delivery' },
@@ -599,11 +600,11 @@ export const mockProducts: Product[] = [
     stock: 55,
     images: [
       'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1544816155-12df9643f363?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1622445262464-84b1456045b6?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-26', name: 'Negro Mate', sku: 'AURA-VTX-018-BLK', color: 'Negro', colorHex: '#18181b', price: 49990, stock: 35 },
-      { id: 'v-27', name: 'Blanco Perla', sku: 'AURA-VTX-018-WHT', color: 'Blanco', colorHex: '#f8fafc', price: 49990, stock: 20 },
+      { id: 'v-26', name: 'Negro Mate', sku: 'AURA-VTX-018-BLK', color: 'Negro', colorHex: '#18181b', price: 49990, stock: 35, image: 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=800&auto=format&fit=crop&q=80' },
+      { id: 'v-27', name: 'Blanco Perla', sku: 'AURA-VTX-018-WHT', color: 'Blanco', colorHex: '#f8fafc', price: 49990, stock: 20, image: 'https://images.unsplash.com/photo-1622445262464-84b1456045b6?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Tecnología', value: 'GaN III Smart Power Sharing' },
@@ -632,12 +633,12 @@ export const mockProducts: Product[] = [
     reviewsCount: 82,
     stock: 45,
     images: [
-      'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1616469829941-c7200edec809?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-28', name: 'Plata Satinado', sku: 'AURA-MIN-019-SLV', color: 'Plata', colorHex: '#cbd5e1', price: 32990, stock: 25 },
-      { id: 'v-29', name: 'Gris Espacial', sku: 'AURA-MIN-019-GRY', color: 'Gris', colorHex: '#475569', price: 32990, stock: 20 },
+      { id: 'v-28', name: 'Plata Satinado', sku: 'AURA-MIN-019-SLV', color: 'Plata', colorHex: '#cbd5e1', price: 32990, stock: 25, image: 'https://images.unsplash.com/photo-1616469829941-c7200edec809?w=800&auto=format&fit=crop&q=80' },
+      { id: 'v-29', name: 'Gris Espacial', sku: 'AURA-MIN-019-GRY', color: 'Gris', colorHex: '#475569', price: 32990, stock: 20, image: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Compatibilidad', value: 'Laptops de 11" a 17"' },
@@ -667,10 +668,10 @@ export const mockProducts: Product[] = [
     stock: 5,
     images: [
       'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1547082299-de196ea013d6?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-30', name: 'Vidrio Nano-Texture', sku: 'AURA-HYP-020-NNO', price: 1899990, stock: 5 },
+      { id: 'v-30', name: 'Vidrio Nano-Texture', sku: 'AURA-HYP-020-NNO', price: 1899990, stock: 5, image: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Resolución', value: '6K Retina (6016 x 3384 a 60Hz)' },
@@ -705,8 +706,8 @@ export const mockProducts: Product[] = [
       'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-31', name: 'Titanio Natural', sku: 'AURA-OMN-021-NAT', color: 'Titanio', colorHex: '#94a3b8', price: 489990, stock: 8 },
-      { id: 'v-32', name: 'Titanio DLC Negro', sku: 'AURA-OMN-021-BLK', color: 'DLC Negro', colorHex: '#0f172a', price: 499990, stock: 6 },
+      { id: 'v-31', name: 'Titanio Natural', sku: 'AURA-OMN-021-NAT', color: 'Titanio', colorHex: '#94a3b8', price: 489990, stock: 8, image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80' },
+      { id: 'v-32', name: 'Titanio DLC Negro', sku: 'AURA-OMN-021-BLK', color: 'DLC Negro', colorHex: '#0f172a', price: 499990, stock: 6, image: 'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Resistencia al agua', value: '10 ATM (100 metros)' },
@@ -736,12 +737,12 @@ export const mockProducts: Product[] = [
     stock: 22,
     images: [
       'https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1603561591411-07134e71a2a9?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-33', name: 'Negro Mate Talla 9', sku: 'AURA-ZEN-022-9B', size: 'Talla 9', color: 'Negro', colorHex: '#18181b', price: 229990, stock: 8 },
-      { id: 'v-34', name: 'Negro Mate Talla 10', sku: 'AURA-ZEN-022-10B', size: 'Talla 10', color: 'Negro', colorHex: '#18181b', price: 229990, stock: 8 },
-      { id: 'v-35', name: 'Plata Talla 10', sku: 'AURA-ZEN-022-10S', size: 'Talla 10', color: 'Plata', colorHex: '#e2e8f0', price: 229990, stock: 6 },
+      { id: 'v-33', name: 'Negro Mate Talla 9', sku: 'AURA-ZEN-022-9B', size: 'Talla 9', color: 'Negro', colorHex: '#18181b', price: 229990, stock: 8, image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&auto=format&fit=crop&q=80' },
+      { id: 'v-34', name: 'Negro Mate Talla 10', sku: 'AURA-ZEN-022-10B', size: 'Talla 10', color: 'Negro', colorHex: '#18181b', price: 229990, stock: 8, image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&auto=format&fit=crop&q=80' },
+      { id: 'v-35', name: 'Plata Talla 10', sku: 'AURA-ZEN-022-10S', size: 'Talla 10', color: 'Plata', colorHex: '#e2e8f0', price: 229990, stock: 6, image: 'https://images.unsplash.com/photo-1603561591411-07134e71a2a9?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Peso', value: '4 gramos' },
@@ -770,11 +771,11 @@ export const mockProducts: Product[] = [
     reviewsCount: 35,
     stock: 18,
     images: [
+      'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800&auto=format&fit=crop&q=80',
       'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-36', name: 'Titanio 22mm', sku: 'AURA-OMN-023-22', price: 69990, stock: 18 },
+      { id: 'v-36', name: 'Titanio 22mm', sku: 'AURA-OMN-023-22', price: 69990, stock: 18, image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Ancho de enganche', value: '22mm Quick-Release estándar' },
@@ -804,11 +805,11 @@ export const mockProducts: Product[] = [
     stock: 30,
     images: [
       'https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1510017803434-a899398421b3?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-37', name: 'Negro Sport', sku: 'AURA-OMN-024-BLK', color: 'Negro', colorHex: '#18181b', price: 59990, stock: 20 },
-      { id: 'v-38', name: 'Verde Oliva', sku: 'AURA-OMN-024-OLV', color: 'Oliva', colorHex: '#4d5d43', price: 59990, stock: 10 },
+      { id: 'v-37', name: 'Negro Sport', sku: 'AURA-OMN-024-BLK', color: 'Negro', colorHex: '#18181b', price: 59990, stock: 20, image: 'https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=800&auto=format&fit=crop&q=80' },
+      { id: 'v-38', name: 'Verde Oliva', sku: 'AURA-OMN-024-OLV', color: 'Oliva', colorHex: '#4d5d43', price: 59990, stock: 10, image: 'https://images.unsplash.com/photo-1510017803434-a899398421b3?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Sumergible', value: '50 metros (5 ATM)' },
@@ -837,11 +838,11 @@ export const mockProducts: Product[] = [
     reviewsCount: 39,
     stock: 15,
     images: [
-      'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-39', name: 'Gris Carbón', sku: 'AURA-ZEN-025-GRY', price: 54990, stock: 15 },
+      { id: 'v-39', name: 'Gris Carbón', sku: 'AURA-ZEN-025-GRY', price: 54990, stock: 15, image: 'https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Temperatura', value: '38°C a 42°C graduable' },
@@ -876,8 +877,8 @@ export const mockProducts: Product[] = [
       'https://images.unsplash.com/photo-1595225476474-87563907a212?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-40', name: 'Negro Stealth', sku: 'AURA-KIN-026-BLK', color: 'Negro Stealth', colorHex: '#18181b', price: 159990, stock: 11 },
-      { id: 'v-41', name: 'Retro Grey', sku: 'AURA-KIN-026-RTR', color: 'Retro Gris', colorHex: '#9ca3af', price: 159990, stock: 8 },
+      { id: 'v-40', name: 'Negro Stealth', sku: 'AURA-KIN-026-BLK', color: 'Negro Stealth', colorHex: '#18181b', price: 159990, stock: 11, image: 'https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=800&auto=format&fit=crop&q=80' },
+      { id: 'v-41', name: 'Retro Grey', sku: 'AURA-KIN-026-RTR', color: 'Retro Gris', colorHex: '#9ca3af', price: 159990, stock: 8, image: 'https://images.unsplash.com/photo-1595225476474-87563907a212?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Switches', value: 'Gateron Magnetic Jade Hall Effect' },
@@ -911,8 +912,8 @@ export const mockProducts: Product[] = [
       'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-42', name: 'Magnesio Negro', sku: 'AURA-KIN-027-BLK', color: 'Negro', colorHex: '#18181b', price: 89990, stock: 15 },
-      { id: 'v-43', name: 'Magnesio Blanco', sku: 'AURA-KIN-027-WHT', color: 'Blanco', colorHex: '#ffffff', price: 89990, stock: 10 },
+      { id: 'v-42', name: 'Magnesio Negro', sku: 'AURA-KIN-027-BLK', color: 'Negro', colorHex: '#18181b', price: 89990, stock: 15, image: 'https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=800&auto=format&fit=crop&q=80' },
+      { id: 'v-43', name: 'Magnesio Blanco', sku: 'AURA-KIN-027-WHT', color: 'Blanco', colorHex: '#ffffff', price: 89990, stock: 10, image: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Peso', value: '42 gramos' },
@@ -941,11 +942,11 @@ export const mockProducts: Product[] = [
     reviewsCount: 71,
     stock: 14,
     images: [
+      'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop&q=80',
       'https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-44', name: 'Vidrio Ahumado 490x420mm', sku: 'AURA-KIN-028-XL', price: 49990, stock: 14 },
+      { id: 'v-44', name: 'Vidrio Ahumado 490x420mm', sku: 'AURA-KIN-028-XL', price: 49990, stock: 14, image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Dimensiones', value: '490 mm x 420 mm x 3.5 mm' },
@@ -974,12 +975,12 @@ export const mockProducts: Product[] = [
     reviewsCount: 54,
     stock: 40,
     images: [
+      'https://images.unsplash.com/photo-1589739900243-4b52cd9b104e?w=800&auto=format&fit=crop&q=80',
       'https://images.unsplash.com/photo-1595225476474-87563907a212?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-45', name: 'Negro Carbón', sku: 'AURA-KIN-029-BLK', color: 'Negro', colorHex: '#18181b', price: 24990, stock: 20 },
-      { id: 'v-46', name: 'Gris Plata', sku: 'AURA-KIN-029-SLV', color: 'Plata', colorHex: '#cbd5e1', price: 24990, stock: 20 },
+      { id: 'v-45', name: 'Negro Carbón', sku: 'AURA-KIN-029-BLK', color: 'Negro', colorHex: '#18181b', price: 24990, stock: 20, image: 'https://images.unsplash.com/photo-1589739900243-4b52cd9b104e?w=800&auto=format&fit=crop&q=80' },
+      { id: 'v-46', name: 'Gris Plata', sku: 'AURA-KIN-029-SLV', color: 'Plata', colorHex: '#cbd5e1', price: 24990, stock: 20, image: 'https://images.unsplash.com/photo-1595225476474-87563907a212?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Longitud', value: '1.5 metros desplegado' },
@@ -1008,11 +1009,11 @@ export const mockProducts: Product[] = [
     reviewsCount: 48,
     stock: 35,
     images: [
-      'https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80',
       'https://images.unsplash.com/photo-1595225476474-87563907a212?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-47', name: 'Kit Completo', sku: 'AURA-KIN-030-KIT', price: 19990, stock: 35 },
+      { id: 'v-47', name: 'Kit Completo', sku: 'AURA-KIN-030-KIT', price: 19990, stock: 35, image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Contenido', value: 'Krytox 205g0 (10g), XHT-BDZ, 4 herramientas' },
@@ -1041,10 +1042,10 @@ export const mockProducts: Product[] = [
     stock: 22,
     images: [
       'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1593062096033-9a26b09da705?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-48', name: 'Negro Mate', sku: 'AURA-KIN-031-BLK', color: 'Negro', colorHex: '#18181b', price: 64990, stock: 22 },
+      { id: 'v-48', name: 'Negro Mate', sku: 'AURA-KIN-031-BLK', color: 'Negro', colorHex: '#18181b', price: 64990, stock: 22, image: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Capacidad de Carga', value: '2 a 16 kg' },
@@ -1079,8 +1080,8 @@ export const mockProducts: Product[] = [
       'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-49', name: '140 x 75 cm', sku: 'AURA-MIN-032-140', size: '140 x 75 cm', price: 499990, stock: 5 },
-      { id: 'v-50', name: '160 x 80 cm', sku: 'AURA-MIN-032-160', size: '160 x 80 cm', price: 549990, stock: 3 },
+      { id: 'v-49', name: '140 x 75 cm', sku: 'AURA-MIN-032-140', size: '140 x 75 cm', price: 499990, stock: 5, image: 'https://images.unsplash.com/photo-1593062096033-9a26b09da705?w=800&auto=format&fit=crop&q=80' },
+      { id: 'v-50', name: '160 x 80 cm', sku: 'AURA-MIN-032-160', size: '160 x 80 cm', price: 549990, stock: 3, image: 'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Rango de Altura', value: '62 cm a 128 cm' },
@@ -1111,11 +1112,11 @@ export const mockProducts: Product[] = [
     stock: 12,
     images: [
       'https://images.unsplash.com/photo-1505797149-43b0069ec26b?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1505843513577-22bb7d21e455?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1580481077197-22d7d8e87d4a?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-51', name: 'Gris Carbón', sku: 'AURA-MIN-033-GRY', color: 'Gris Carbón', colorHex: '#374151', price: 349990, stock: 7 },
-      { id: 'v-52', name: 'Blanco Lunar', sku: 'AURA-MIN-033-WHT', color: 'Blanco', colorHex: '#e2e8f0', price: 349990, stock: 5 },
+      { id: 'v-51', name: 'Gris Carbón', sku: 'AURA-MIN-033-GRY', color: 'Gris Carbón', colorHex: '#374151', price: 349990, stock: 7, image: 'https://images.unsplash.com/photo-1505797149-43b0069ec26b?w=800&auto=format&fit=crop&q=80' },
+      { id: 'v-52', name: 'Blanco Lunar', sku: 'AURA-MIN-033-WHT', color: 'Blanco', colorHex: '#e2e8f0', price: 349990, stock: 5, image: 'https://images.unsplash.com/photo-1580481077197-22d7d8e87d4a?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Malla', value: 'Wintex KR Transpirable de Alto Desgaste' },
@@ -1144,12 +1145,12 @@ export const mockProducts: Product[] = [
     reviewsCount: 64,
     stock: 25,
     images: [
-      'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1544816155-12df9643f363?w=800&auto=format&fit=crop&q=80',
       'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-53', name: 'Roble Claro', sku: 'AURA-MIN-034-OAK', color: 'Roble', colorHex: '#d97706', price: 69990, stock: 15 },
-      { id: 'v-54', name: 'Nogal Oscuro', sku: 'AURA-MIN-034-WNT', color: 'Nogal', colorHex: '#78350f', price: 69990, stock: 10 },
+      { id: 'v-53', name: 'Roble Claro', sku: 'AURA-MIN-034-OAK', color: 'Roble', colorHex: '#d97706', price: 69990, stock: 15, image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?w=800&auto=format&fit=crop&q=80' },
+      { id: 'v-54', name: 'Nogal Oscuro', sku: 'AURA-MIN-034-WNT', color: 'Nogal', colorHex: '#78350f', price: 69990, stock: 10, image: 'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Longitud', value: '110 cm x 24 cm x 11 cm' },
@@ -1178,12 +1179,12 @@ export const mockProducts: Product[] = [
     reviewsCount: 95,
     stock: 40,
     images: [
-      'https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1616469829941-c7200edec809?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-55', name: 'Gris Antracita 90x40cm', sku: 'AURA-MIN-035-ANT', color: 'Antracita', colorHex: '#374151', price: 34990, stock: 25 },
-      { id: 'v-56', name: 'Gris Claro 90x40cm', sku: 'AURA-MIN-035-LGT', color: 'Gris Claro', colorHex: '#e5e7eb', price: 34990, stock: 15 },
+      { id: 'v-55', name: 'Gris Antracita 90x40cm', sku: 'AURA-MIN-035-ANT', color: 'Antracita', colorHex: '#374151', price: 34990, stock: 25, image: 'https://images.unsplash.com/photo-1616469829941-c7200edec809?w=800&auto=format&fit=crop&q=80' },
+      { id: 'v-56', name: 'Gris Claro 90x40cm', sku: 'AURA-MIN-035-LGT', color: 'Gris Claro', colorHex: '#e5e7eb', price: 34990, stock: 15, image: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Dimensiones', value: '900 mm x 400 mm x 4 mm' },
@@ -1212,12 +1213,12 @@ export const mockProducts: Product[] = [
     reviewsCount: 41,
     stock: 30,
     images: [
-      'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1622445262464-84b1456045b6?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-57', name: 'Negro', sku: 'AURA-MIN-036-BLK', color: 'Negro', colorHex: '#18181b', price: 24990, stock: 15 },
-      { id: 'v-58', name: 'Blanco', sku: 'AURA-MIN-036-WHT', color: 'Blanco', colorHex: '#ffffff', price: 24990, stock: 15 },
+      { id: 'v-57', name: 'Negro', sku: 'AURA-MIN-036-BLK', color: 'Negro', colorHex: '#18181b', price: 24990, stock: 15, image: 'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&auto=format&fit=crop&q=80' },
+      { id: 'v-58', name: 'Blanco', sku: 'AURA-MIN-036-WHT', color: 'Blanco', colorHex: '#ffffff', price: 24990, stock: 15, image: 'https://images.unsplash.com/photo-1622445262464-84b1456045b6?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Longitud', value: '130 cm extensible' },
@@ -1249,11 +1250,11 @@ export const mockProducts: Product[] = [
     stock: 20,
     images: [
       'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1546938576-6e6a64f317cc?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-59', name: 'Negro Mate Balístico', sku: 'AURA-AER-037-BLK', color: 'Negro', colorHex: '#18181b', price: 129990, stock: 12 },
-      { id: 'v-60', name: 'Gris Asfalto', sku: 'AURA-AER-037-GRY', color: 'Gris', colorHex: '#475569', price: 129990, stock: 8 },
+      { id: 'v-59', name: 'Negro Mate Balístico', sku: 'AURA-AER-037-BLK', color: 'Negro', colorHex: '#18181b', price: 129990, stock: 12, image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&auto=format&fit=crop&q=80' },
+      { id: 'v-60', name: 'Gris Asfalto', sku: 'AURA-AER-037-GRY', color: 'Gris', colorHex: '#475569', price: 129990, stock: 8, image: 'https://images.unsplash.com/photo-1546938576-6e6a64f317cc?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Tejido', value: 'Cordura® 1680D Ballistic Nylon' },
@@ -1284,11 +1285,11 @@ export const mockProducts: Product[] = [
     stock: 24,
     images: [
       'https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1544816155-12df9643f363?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-61', name: 'Negro Stealth', sku: 'AURA-AER-038-BLK', color: 'Negro', colorHex: '#18181b', price: 59990, stock: 16 },
-      { id: 'v-62', name: 'Verde Ranger', sku: 'AURA-AER-038-RNG', color: 'Verde', colorHex: '#365314', price: 59990, stock: 8 },
+      { id: 'v-61', name: 'Negro Stealth', sku: 'AURA-AER-038-BLK', color: 'Negro', colorHex: '#18181b', price: 59990, stock: 16, image: 'https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=800&auto=format&fit=crop&q=80' },
+      { id: 'v-62', name: 'Verde Ranger', sku: 'AURA-AER-038-RNG', color: 'Verde', colorHex: '#365314', price: 59990, stock: 8, image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Hebilla', value: 'Magnética Fidlock® V-Buckle' },
@@ -1317,11 +1318,11 @@ export const mockProducts: Product[] = [
     reviewsCount: 97,
     stock: 35,
     images: [
-      'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&auto=format&fit=crop&q=80',
       'https://images.unsplash.com/photo-1544816155-12df9643f363?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-63', name: 'Negro Ripstop', sku: 'AURA-AER-039-BLK', price: 27990, stock: 35 },
+      { id: 'v-63', name: 'Negro Ripstop', sku: 'AURA-AER-039-BLK', price: 27990, stock: 35, image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Tejido Exterior', value: 'X-Pac VX21 Impermeable' },
@@ -1351,10 +1352,10 @@ export const mockProducts: Product[] = [
     stock: 10,
     images: [
       'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1546938576-6e6a64f317cc?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-64', name: 'Negro Grafito 40L', sku: 'AURA-AER-040-BLK', price: 149990, stock: 10 },
+      { id: 'v-64', name: 'Negro Grafito 40L', sku: 'AURA-AER-040-BLK', price: 149990, stock: 10, image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Volumen', value: '40 Litros (Norma Cabina IATA)' },
@@ -1384,10 +1385,10 @@ export const mockProducts: Product[] = [
     stock: 45,
     images: [
       'https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1589739900243-4b52cd9b104e?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-65', name: 'Negro Mate', sku: 'AURA-AER-041-BLK', price: 14990, stock: 45 },
+      { id: 'v-65', name: 'Negro Mate', sku: 'AURA-AER-041-BLK', price: 14990, stock: 45, image: 'https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Mecanismo', value: 'Fidlock SNAP Mag-Lock' },
@@ -1418,13 +1419,13 @@ export const mockProducts: Product[] = [
     reviewsCount: 104,
     stock: 28,
     images: [
-      'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-66', name: 'Gris Humo 41 EU', sku: 'AURA-CAL-042-41G', size: '41 EU', color: 'Gris', colorHex: '#64748b', price: 79990, stock: 8 },
-      { id: 'v-67', name: 'Gris Humo 42 EU', sku: 'AURA-CAL-042-42G', size: '42 EU', color: 'Gris', colorHex: '#64748b', price: 79990, stock: 10 },
-      { id: 'v-68', name: 'Negro Onix 42 EU', sku: 'AURA-CAL-042-42B', size: '42 EU', color: 'Negro', colorHex: '#18181b', price: 79990, stock: 10 },
+      { id: 'v-66', name: 'Gris Humo 41 EU', sku: 'AURA-CAL-042-41G', size: '41 EU', color: 'Gris', colorHex: '#64748b', price: 79990, stock: 8, image: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&auto=format&fit=crop&q=80' },
+      { id: 'v-67', name: 'Gris Humo 42 EU', sku: 'AURA-CAL-042-42G', size: '42 EU', color: 'Gris', colorHex: '#64748b', price: 79990, stock: 10, image: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&auto=format&fit=crop&q=80' },
+      { id: 'v-68', name: 'Negro Onix 42 EU', sku: 'AURA-CAL-042-42B', size: '42 EU', color: 'Negro', colorHex: '#18181b', price: 79990, stock: 10, image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Peso', value: '235 gramos por zapatilla' },
@@ -1453,12 +1454,12 @@ export const mockProducts: Product[] = [
     reviewsCount: 46,
     stock: 14,
     images: [
-      'https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=800&auto=format&fit=crop&q=80',
       'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-69', name: 'Lima Volt 41 EU', sku: 'AURA-CAL-043-41V', size: '41 EU', color: 'Lima', colorHex: '#84cc16', price: 139990, stock: 6 },
-      { id: 'v-70', name: 'Lima Volt 42 EU', sku: 'AURA-CAL-043-42V', size: '42 EU', color: 'Lima', colorHex: '#84cc16', price: 139990, stock: 8 },
+      { id: 'v-69', name: 'Lima Volt 41 EU', sku: 'AURA-CAL-043-41V', size: '41 EU', color: 'Lima', colorHex: '#84cc16', price: 139990, stock: 6, image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop&q=80' },
+      { id: 'v-70', name: 'Lima Volt 42 EU', sku: 'AURA-CAL-043-42V', size: '42 EU', color: 'Lima', colorHex: '#84cc16', price: 139990, stock: 8, image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Drop', value: '8 mm' },
@@ -1487,12 +1488,12 @@ export const mockProducts: Product[] = [
     reviewsCount: 37,
     stock: 15,
     images: [
-      'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1520639888713-7851133b1ed0?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-71', name: 'Cuero Marrón Espresso 42 EU', sku: 'AURA-CAL-044-42B', size: '42 EU', color: 'Marrón', colorHex: '#451a03', price: 119990, stock: 8 },
-      { id: 'v-72', name: 'Cuero Negro Mate 43 EU', sku: 'AURA-CAL-044-43K', size: '43 EU', color: 'Negro', colorHex: '#18181b', price: 119990, stock: 7 },
+      { id: 'v-71', name: 'Cuero Marrón Espresso 42 EU', sku: 'AURA-CAL-044-42B', size: '42 EU', color: 'Marrón', colorHex: '#451a03', price: 119990, stock: 8, image: 'https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=800&auto=format&fit=crop&q=80' },
+      { id: 'v-72', name: 'Cuero Negro Mate 43 EU', sku: 'AURA-CAL-044-43K', size: '43 EU', color: 'Negro', colorHex: '#18181b', price: 119990, stock: 7, image: 'https://images.unsplash.com/photo-1520639888713-7851133b1ed0?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Suela', value: 'Vibram® Arctic Grip antideslizante' },
@@ -1521,12 +1522,12 @@ export const mockProducts: Product[] = [
     reviewsCount: 65,
     stock: 35,
     images: [
-      'https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1603808033192-082d6919d3e1?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1627637454034-4decab37e408?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-73', name: 'Arena Talla M (40-42)', sku: 'AURA-CAL-045-SND', size: 'M (40-42)', color: 'Arena', colorHex: '#d6d3d1', price: 29990, stock: 20 },
-      { id: 'v-74', name: 'Negro Carbón Talla L (43-45)', sku: 'AURA-CAL-045-BLK', size: 'L (43-45)', color: 'Negro', colorHex: '#18181b', price: 29990, stock: 15 },
+      { id: 'v-73', name: 'Arena Talla M (40-42)', sku: 'AURA-CAL-045-SND', size: 'M (40-42)', color: 'Arena', colorHex: '#d6d3d1', price: 29990, stock: 20, image: 'https://images.unsplash.com/photo-1603808033192-082d6919d3e1?w=800&auto=format&fit=crop&q=80' },
+      { id: 'v-74', name: 'Negro Carbón Talla L (43-45)', sku: 'AURA-CAL-045-BLK', size: 'L (43-45)', color: 'Negro', colorHex: '#18181b', price: 29990, stock: 15, image: 'https://images.unsplash.com/photo-1627637454034-4decab37e408?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Material', value: '100% Bloque EVA Moldeado Inyectado' },
@@ -1554,11 +1555,11 @@ export const mockProducts: Product[] = [
     reviewsCount: 52,
     stock: 50,
     images: [
-      'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=800&auto=format&fit=crop&q=80',
       'https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-75', name: 'Pack 3 Gris Mixto', sku: 'AURA-CAL-046-MIX', price: 19990, stock: 50 },
+      { id: 'v-75', name: 'Pack 3 Gris Mixto', sku: 'AURA-CAL-046-MIX', price: 19990, stock: 50, image: 'https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Composición', value: '78% Lana Merino, 18% Poliamida, 4% Elastano' },
@@ -1592,7 +1593,7 @@ export const mockProducts: Product[] = [
       'https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-76', name: 'Kit Creador Completo', sku: 'AURA-FOT-047-KIT', price: 649990, stock: 9 },
+      { id: 'v-76', name: 'Kit Creador Completo', sku: 'AURA-FOT-047-KIT', price: 649990, stock: 9, image: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Sensor', value: 'Sensor CMOS apilado de 1.0 pulgada 20.1 MP' },
@@ -1621,11 +1622,11 @@ export const mockProducts: Product[] = [
     reviewsCount: 58,
     stock: 22,
     images: [
-      'https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&auto=format&fit=crop&q=80',
       'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-77', name: 'Gris Grafito', sku: 'AURA-FOT-048-GRY', price: 99990, stock: 22 },
+      { id: 'v-77', name: 'Gris Grafito', sku: 'AURA-FOT-048-GRY', price: 99990, stock: 22, image: 'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Estabilización', value: '3 Ejes Mecánicos con motores brushless' },
@@ -1654,11 +1655,11 @@ export const mockProducts: Product[] = [
     reviewsCount: 42,
     stock: 12,
     images: [
+      'https://images.unsplash.com/photo-1495745966610-2a67f2297e5e?w=800&auto=format&fit=crop&q=80',
       'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-78', name: 'Fibra de Carbono Mate', sku: 'AURA-FOT-049-CRB', price: 139990, stock: 12 },
+      { id: 'v-78', name: 'Fibra de Carbono Mate', sku: 'AURA-FOT-049-CRB', price: 139990, stock: 12, image: 'https://images.unsplash.com/photo-1495745966610-2a67f2297e5e?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Altura Máxima', value: '154 cm (columna extendida)' },
@@ -1688,11 +1689,11 @@ export const mockProducts: Product[] = [
     stock: 40,
     images: [
       'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1544816155-12df9643f363?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1622445262464-84b1456045b6?w=800&auto=format&fit=crop&q=80',
     ],
     variants: [
-      { id: 'v-79', name: 'Negro Titanio', sku: 'AURA-VTX-050-BLK', color: 'Negro', colorHex: '#18181b', price: 39990, stock: 25 },
-      { id: 'v-80', name: 'Azul Titanio', sku: 'AURA-VTX-050-BLU', color: 'Azul', colorHex: '#1e3a8a', price: 39990, stock: 15 },
+      { id: 'v-79', name: 'Negro Titanio', sku: 'AURA-VTX-050-BLK', color: 'Negro', colorHex: '#18181b', price: 39990, stock: 25, image: 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=800&auto=format&fit=crop&q=80' },
+      { id: 'v-80', name: 'Azul Titanio', sku: 'AURA-VTX-050-BLU', color: 'Azul', colorHex: '#1e3a8a', price: 39990, stock: 15, image: 'https://images.unsplash.com/photo-1622445262464-84b1456045b6?w=800&auto=format&fit=crop&q=80' },
     ],
     attributes: [
       { name: 'Capacidad', value: '10.000 mAh (hasta 2.2 cargas completas)' },

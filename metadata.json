@@ -1,0 +1,6 @@
+{
+  "name": "AURA | E-Commerce Profesional",
+  "description": "Plataforma e-commerce profesional, moderna y modular con storefront completo, catálogo avanzado, checkout interactivo, portal de cliente y panel de administración.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

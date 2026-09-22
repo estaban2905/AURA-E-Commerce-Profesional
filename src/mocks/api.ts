@@ -22,13 +22,40 @@ const STORAGE_KEYS = {
 
 // Initialize or read from localStorage so Admin mutations persist across views
 export function getStoredProducts(): Product[] {
+  let list: Product[] = mockProducts;
   try {
     const raw = localStorage.getItem(STORAGE_KEYS.PRODUCTS);
-    if (raw) return JSON.parse(raw);
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed) && parsed.length > 0) {
+        list = parsed;
+      }
+    }
   } catch (e) {
     console.error(e);
   }
-  return mockProducts;
+
+  // Sanitize all products to prevent runtime crashes from missing optional fields
+  return list.map((p) => ({
+    ...p,
+    id: p.id || `prod-${Math.random().toString(36).substring(2, 9)}`,
+    slug: p.slug || `producto-${p.id}`,
+    name: p.name || 'Producto sin nombre',
+    brand: p.brand || 'AURA',
+    category: p.category || 'cat-audio',
+    price: typeof p.price === 'number' ? p.price : 0,
+    stock: typeof p.stock === 'number' ? p.stock : 10,
+    rating: typeof p.rating === 'number' && !isNaN(p.rating) ? p.rating : 4.8,
+    reviewsCount: typeof p.reviewsCount === 'number' ? p.reviewsCount : 12,
+    images: Array.isArray(p.images) && p.images.length > 0
+      ? p.images
+      : ['https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=80'],
+    variants: Array.isArray(p.variants) ? p.variants : [],
+    attributes: Array.isArray(p.attributes) ? p.attributes : [],
+    tags: Array.isArray(p.tags) ? p.tags : [],
+    shortDescription: p.shortDescription || '',
+    description: p.description || p.shortDescription || '',
+  }));
 }
 
 export function saveStoredProducts(products: Product[]): void {

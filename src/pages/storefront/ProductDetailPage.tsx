@@ -164,8 +164,8 @@ export const ProductDetailPage: React.FC = () => {
         <ChevronRight className="h-3 w-3" />
         <Link to="/catalog" className="hover:text-foreground">Catálogo</Link>
         <ChevronRight className="h-3 w-3" />
-        <Link to={`/catalog?category=${product.category}`} className="hover:text-foreground">
-          {product.category.replace('cat-', '').toUpperCase()}
+        <Link to={`/catalog?category=${product.category || 'all'}`} className="hover:text-foreground">
+          {product.category ? product.category.replace('cat-', '').toUpperCase() : 'PRODUCTO'}
         </Link>
         <ChevronRight className="h-3 w-3" />
         <span className="text-foreground font-semibold truncate max-w-xs">{product.name}</span>
@@ -504,7 +504,7 @@ export const ProductDetailPage: React.FC = () => {
             <p>{product.description || product.shortDescription}</p>
             <h4 className="text-base font-bold text-foreground pt-4">Destacados del Producto</h4>
             <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
-              {product.attributes.map((attr, idx) => (
+              {(product.attributes || []).map((attr, idx) => (
                 <li key={idx}>
                   <strong className="text-foreground">{attr.name}:</strong> {attr.value}
                 </li>
@@ -517,7 +517,7 @@ export const ProductDetailPage: React.FC = () => {
         {activeTab === 'specs' && (
           <div className="max-w-2xl">
             <div className="rounded-xl border border-border overflow-hidden divide-y divide-border">
-              {product.attributes.map((attr, idx) => (
+              {(product.attributes || []).map((attr, idx) => (
                 <div key={idx} className="grid grid-cols-3 p-3 text-xs">
                   <span className="font-semibold text-foreground">{attr.name}</span>
                   <span className="col-span-2 text-muted-foreground">{attr.value}</span>
@@ -570,8 +570,8 @@ export const ProductDetailPage: React.FC = () => {
             {/* Reviews Summary Header */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 rounded-2xl border border-border bg-card">
               <div className="flex flex-col items-center justify-center text-center border-b md:border-b-0 md:border-r border-border pb-6 md:pb-0">
-                <span className="text-5xl font-black text-foreground">{product.rating.toFixed(1)}</span>
-                <Rating value={product.rating} size="lg" className="my-2" />
+                <span className="text-5xl font-black text-foreground">{(product.rating || 5).toFixed(1)}</span>
+                <Rating value={product.rating || 5} size="lg" className="my-2" />
                 <span className="text-xs text-muted-foreground">
                   Basado en {reviews.length} valoraciones verificadas
                 </span>

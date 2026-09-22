@@ -28,14 +28,17 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, className = '
 
   const isFavorite = isInWishlist(product.id);
   const activeVariant = product.variants?.[selectedVariantIndex];
-  const price = activeVariant?.price || product.price;
+  const price = activeVariant?.price || product.price || 0;
   const compareAtPrice = product.compareAtPrice;
   const hasDiscount = !!compareAtPrice && compareAtPrice > price;
   const discountPercent = hasDiscount ? Math.round(((compareAtPrice - price) / compareAtPrice) * 100) : 0;
 
-  // Use selected variant image or primary image, and secondary on hover if available
-  const primaryImage = activeVariant?.image || product.images[0] || 'https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800';
-  const hoverImage = product.images[1] || primaryImage;
+  // Safe image resolution with fallbacks
+  const primaryImage =
+    activeVariant?.image ||
+    (Array.isArray(product.images) && product.images[0]) ||
+    'https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800';
+  const hoverImage = (Array.isArray(product.images) && product.images[1]) || primaryImage;
 
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -152,26 +155,26 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, className = '
       </div>
 
       {/* Content Container */}
-      <div className="flex flex-1 flex-col p-4 sm:p-5">
+      <div className="flex flex-1 flex-col p-3 sm:p-4 md:p-5">
         {/* Brand & Category & Rating */}
-        <div className="mb-1.5 flex items-center justify-between text-xs text-muted-foreground">
-          <span className="font-bold uppercase tracking-wider text-[10px] text-primary/90 bg-primary/10 px-2 py-0.5 rounded-md">
-            {product.brand}
+        <div className="mb-1 sm:mb-1.5 flex items-center justify-between text-xs text-muted-foreground">
+          <span className="font-bold uppercase tracking-wider text-[9px] sm:text-[10px] text-primary/90 bg-primary/10 px-1.5 sm:px-2 py-0.5 rounded-md truncate max-w-[90px] sm:max-w-none">
+            {product.brand || 'AURA'}
           </span>
-          <Rating value={product.rating} size="sm" showCount={false} />
+          <Rating value={product.rating || 5} size="sm" showCount={false} />
         </div>
 
         {/* Product Title */}
         <Link
           to={`/product/${product.slug}`}
-          className="line-clamp-2 text-sm sm:text-[15px] font-semibold text-foreground hover:text-primary transition-colors mb-2 leading-snug"
+          className="line-clamp-2 text-xs sm:text-[14px] md:text-[15px] font-semibold text-foreground hover:text-primary transition-colors mb-1.5 sm:mb-2 leading-snug"
         >
           {product.name}
         </Link>
 
         {/* Color Swatches if available */}
         {product.variants && product.variants.length > 1 && (
-          <div className="mb-3 flex items-center gap-1.5">
+          <div className="mb-2 sm:mb-3 flex items-center gap-1 sm:gap-1.5">
             {product.variants.slice(0, 4).map((variant, idx) => (
               <button
                 key={variant.id}
@@ -181,27 +184,27 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, className = '
                   e.stopPropagation();
                   setSelectedVariantIndex(idx);
                 }}
-                className={`h-3.5 w-3.5 rounded-full border border-border/80 transition-transform ${
-                  selectedVariantIndex === idx ? 'ring-2 ring-primary ring-offset-1 scale-115' : 'hover:scale-110'
+                className={`h-3 w-3 sm:h-3.5 sm:w-3.5 rounded-full border border-border/80 transition-transform ${
+                  selectedVariantIndex === idx ? 'ring-2 ring-primary ring-offset-1 scale-110' : 'hover:scale-105'
                 }`}
                 style={{ backgroundColor: variant.colorHex || '#333' }}
                 title={variant.name}
               />
             ))}
             {product.variants.length > 4 && (
-              <span className="text-[10px] text-muted-foreground font-medium">+{product.variants.length - 4}</span>
+              <span className="text-[9px] sm:text-[10px] text-muted-foreground font-medium">+{product.variants.length - 4}</span>
             )}
           </div>
         )}
 
         {/* Price & Mobile Add Button */}
-        <div className="mt-auto pt-3 flex items-center justify-between border-t border-border/40">
-          <div className="flex flex-col">
-            <span className="text-base sm:text-lg font-black text-foreground tracking-tight">
+        <div className="mt-auto pt-2 sm:pt-3 flex items-center justify-between border-t border-border/40 gap-1">
+          <div className="flex flex-col min-w-0">
+            <span className="text-sm sm:text-base md:text-lg font-black text-foreground tracking-tight truncate">
               {formatCurrency(price)}
             </span>
             {hasDiscount && (
-              <span className="text-xs text-muted-foreground/80 line-through">
+              <span className="text-[10px] sm:text-xs text-muted-foreground/80 line-through truncate">
                 {formatCurrency(compareAtPrice!)}
               </span>
             )}
@@ -211,10 +214,15 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, className = '
           <button
             type="button"
             onClick={handleAddToCart}
-            className="flex h-9 w-9 items-center justify-center rounded-xl bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground sm:hidden transition-colors shadow-xs"
+            disabled={product.stock <= 0}
+            className={`flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-lg sm:rounded-xl transition-all shadow-xs sm:hidden shrink-0 active:scale-95 ${
+              justAdded
+                ? 'bg-emerald-600 text-white'
+                : 'bg-primary text-primary-foreground hover:bg-primary/90'
+            }`}
             aria-label="Agregar al carrito"
           >
-            <Plus className="h-4 w-4" />
+            {justAdded ? <Check className="h-3.5 w-3.5" /> : <Plus className="h-4 w-4" />}
           </button>
         </div>
       </div>
